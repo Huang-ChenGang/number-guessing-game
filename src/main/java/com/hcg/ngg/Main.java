@@ -25,7 +25,7 @@ public class Main {
         try {
             for (int r = 0; r < ROUND_NUMBER; r++) {
                 String roundName = String.valueOf(r + 1);
-                System.out.println("##### ROUND " + roundName + " BEGIN #####");
+                System.out.println("$$$$$ ROUND " + roundName + " BEGIN $$$$$");
                 GuessRound guessRound = new GuessRound(roundName, NumberGenerator.generate());
                 List<Player> winners = new ArrayList<>();
 
@@ -47,7 +47,7 @@ public class Main {
 
                 guessRound.setWinnerList(winners);
                 guessRoundList.add(guessRound);
-                System.out.println("##### ROUND " + roundName + " END #####\n");
+                System.out.println("$$$$$ ROUND " + roundName + " END $$$$$\n");
             }
 
         } catch (InputMismatchException e) {
@@ -58,11 +58,11 @@ public class Main {
             scanner.close();
         }
 
-        System.out.println("##### ROUND RESULTS BEGIN #####");
+        System.out.println("$$$$$ ROUND RESULTS BEGIN $$$$$");
         guessRoundList.forEach(System.out::println);
-        System.out.println("##### ROUND RESULTS END #####\n");
+        System.out.println("$$$$$ ROUND RESULTS END $$$$$\n");
 
-        System.out.println("##### PLAYER RESULTS BEGIN #####");
+        System.out.println("$$$$$ PLAYER RESULTS BEGIN $$$$$");
         playerList.forEach(System.out::println);
 
         System.out.println("The Overall winners:");
@@ -75,7 +75,7 @@ public class Main {
                 .filter(p -> p.getScore() == maxScore)
                 .forEach(p -> System.out.println("Player: " + p.getName()));
 
-        System.out.println("##### PLAYER RESULTS END #####");
+        System.out.println("$$$$$ PLAYER RESULTS END $$$$$");
 
     }
 
